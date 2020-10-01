@@ -13,8 +13,9 @@ collections:
     label: "Post" # Used in the UI
     folder: "posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    preview: false
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+     preview: false
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -32,7 +33,6 @@ collections:
     label: "Page"
     folder: "pages"
     create: false # Change to true to allow editors to create new pages
-    preview: false
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -50,7 +50,6 @@ collections:
     label: "Author"
     folder: "authors"
     create: true
-    preview: false
     slug: "{{fields.name}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
